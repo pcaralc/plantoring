@@ -71,23 +71,23 @@
                                             class="mb-6 uppercase text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                                             {{ $terreno->nombre }}</h5>
 
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Nombre:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Nombre:</strong>
                                             {{ $terreno->nombre }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Descripción:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Descripción:</strong>
                                             {{ $terreno->descripcion }}</p>
 
 
                                         @if ($terreno->ecologico == 0)
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Ecologico: No
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Ecologico:</strong> No
                                             </p>
                                         @else
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Ecologico: Si
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Ecologico:</strong> Si
                                             </p>
                                         @endif
 
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Latitud:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Latitud:</strong>
                                             {{ $terreno->latitud }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Longitud:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Longitud:</strong>
                                             {{ $terreno->longitud }}</p>
 
                                         <div class="flex mt-4 space-x-3 md:mt-6 mb-4">

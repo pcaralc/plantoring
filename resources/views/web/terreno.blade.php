@@ -86,27 +86,37 @@
         <div class="flex flex-wrap justify-between pt-8 -mx-6 rounded">
 
             @foreach ($plantas as $planta)
-                <div class="w-full md:w-1/3 p-6 " onmouseover="aumentarTarjeta(this)" onmouseout="restaurarTarjeta(this)">
-                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                <li class="list-none border border-gray-300 rounded mb-2" onmouseover="aumentarTarjeta(this)"
+                onmouseout="restaurarTarjeta(this)">
+                    <div class="flex  h-32 bg-white rounded overflow-hidden shadow-lg ">
                         <a href="/terreno/{{ $empresa->id }}/plantacion/{{ $planta->id }}"
-                            class="flex flex-wrap no-underline hover:no-underline">
-                            <img src="{{ asset($planta->imagen) }}"
-                                class="h-64 w-full rounded-t pb-6">
-                            <!--imagenes de los terrrenos-->
-                            <div class="w-full font-bold text-xl text-gray-900 px-6">{{ $planta->nombre }}
+                            class="flex flex-wrap no-underline hover:no-underline ">
+                            <div class="w-full md:w-1/5 rounded-t">
+                                <img src="{{ asset($planta->imagen) }}" class="h-full w-full shadow">
                             </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                {{ $planta->descripcion }}
-                            </p>
+
+                            <div class="w-full md:w-1/3 pl-4 flexflex-col flex-grow flex-shrink">
+                                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                                    <div class="w-full font-bold text-xl text-gray-900 px-6 py-2 ">
+                                        {{ $planta->nombre }}
+                                    </div>
+                                    <p class="text-gray-700 font-normal text-base px-6 mb-5  ">
+                                        {{ $planta->descripcion }}<br>
+                                    <div class="ml-6 flex">
+                                        <p class="text-gray-400 text-xs md:text-sm">Temp. min: {{ $planta->temp_min }}
+                                            &#8451</p>
+                                        <p class=" ml-8 text-gray-400 text-xs md:text-sm">Temp.
+                                            max: {{ $planta->temp_max }} &#8451</p>
+                                    </div>
+                                    </p>
+                                </div>
+                            </div>
+
                         </a>
                     </div>
-                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                        <div class="flex items-center justify-between">
-                            <p class="text-gray-400 text-xs md:text-sm">Origen: {{ $planta->origen }} </p>
-                        </div>
-                    </div>
-                </div>
+                </li>
             @endforeach
+
         </div>
 
     </div>

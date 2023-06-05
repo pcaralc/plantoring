@@ -23,7 +23,7 @@
                                     <div class="mb-3 p-2">
                                         <label for="descripcion" class="form-label">Descripción: </label>
                                         <textarea id="descripcion" name="descripcion" class="rounded text-gray-900 w-full" 
-                                            placeholder="{{ $planta->descripcion }}">{{ $planta->descripcion }}</textarea>
+                                            placeholder="{{ $empresa->descripcion }}">{{ $empresa->descripcion }}</textarea>
                                     </div>
                                 </div>
                             </div>

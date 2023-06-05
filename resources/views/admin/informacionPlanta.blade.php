@@ -84,40 +84,40 @@
                                             class="mb-6 uppercase text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                                             {{ $planta->nombre }}</h5>
 
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Nombre:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Nombre:</strong>
                                             {{ $planta->nombre }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Descripción:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Descripción:</strong>
                                             {{ $planta->descripcion }}</p>
 
                                         @if ($planta->temporada == 'springSummer')
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Temporada: Primavera-Verano
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Temporada:</strong> Primavera-Verano
                                             </p>
                                         @else
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Temporada: Otoño-Invierno
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Temporada:</strong> Otoño-Invierno
                                             </p>
                                         @endif
 
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Siembra:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Siembra:</strong>
                                             {{ $planta->siembra }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Cosecha:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Cosecha:</strong>
                                             {{ $planta->cosecha }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Origen:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Origen:</strong>
                                             {{ $planta->origen }}</p>
 
                                         @if ($planta->especie == 'raicesTuberculos')
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Especie: raices/tuberculos
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Especie:</strong> raices/tuberculos
                                             </p>
                                         @elseif($planta->especie == 'medicinalesAromaticas')
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Especie: medicinales/aromáticas
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Especie:</strong> medicinales/aromáticas
                                             </p>
                                         @else
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Especie: {{ $planta->especie }}
+                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Especie:</strong> {{ $planta->especie }}
                                             </p>
                                         @endif
 
-                                        <p class="ml-4 mb-3 font-normal text-gray-700 dark:text-gray-400"><strong> Temperatura mínima: </strong>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600"> Temperatura mínima: </strong>
                                             {{ $planta->temp_min }} &#8451</p>
-                                        <p class="ml-4 mb-3 font-normal text-gray-700 dark:text-gray-400"><strong> Temperatura máxima: </strong>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Temperatura máxima: </strong>
                                             {{ $planta->temp_max }}&#8451</p>
 
                                         <div class="flex mt-4 space-x-3 md:mt-6 mb-4">

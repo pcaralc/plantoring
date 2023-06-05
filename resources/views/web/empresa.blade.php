@@ -146,25 +146,31 @@
 
     </div>
 
-    <footer class="bg-green-700 rounded mt-40 w-full">
-        <div class="container max-w-6xl mx-auto flex items-center px-2 py-8">
+    <footer class="bg-green-700 rounded mt-40 ">
+        <div class="container  mx-auto  items-center px-2 py-8">
 
-            <div class="w-full mx-auto flex flex-wrap items-center">
-                <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-bold">
-
-                    <a class="text-white no-underline hover:text-gray-400 hover:no-underline ml-2"
-                        href="/empresa/{{ $empresa->id }}">
-                        {{ $empresa->nombre }}
-                    </a>
-                </div>
-                <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
-                    <ul class="list-reset flex justify-center flex-1 md:flex-none items-center">
+            <div class="w-full mx-auto items-center">
+                <div class="flex w-full pt-2 md:w-1/2 md:justify-end">
+                    <ul class=" flex flex-col justify-center flex-1 md:flex-none items-center">
                         <li>
-                            <a class="inline-block py-2 px-3 text-white no-underline" href="/">Plantoring</a>
+                            <a class="text-white font-bold no-underline hover:text-gray-400 hover:no-underline ml-2"
+                                href="/empresa/{{ $empresa->id }}">
+                                {{ $empresa->nombre }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" py-2 px-3 text-white no-underline" href="/">Plantoring</a>
+                        </li>
+                        <li>
+                            <p class="py-2 px-3 text-white no-underline">&copy;Plantoring 2023</p>
                         </li>
                     </ul>
                 </div>
             </div>
+
+
+
+
         </div>
     </footer>
 

@@ -59,19 +59,19 @@
                                         <h5
                                             class="mb-6 uppercase text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                                             {{ $empresa->nombre }}</h5>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Nombre:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Nombre:</strong>
                                             {{ $empresa->nombre }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Descripción:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Descripción:</strong>
                                             {{ $empresa->descripcion }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Ciudad:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Ciudad:</strong>
                                             {{ $empresa->ciudad }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Teléfono:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Teléfono:</strong>
                                             {{ $empresa->telefono }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Email:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Email:</strong>
                                             {{ $empresa->email }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Latitud:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Latitud:</strong>
                                             {{ $empresa->latitud }}</p>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Longitud:
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><strong class="text-green-600">Longitud:</strong>
                                             {{ $empresa->longitud }}</p>
 
 
@@ -98,7 +98,7 @@
                                     </div>
 
                                     <div class="mt-4">
-                                        <iframe width="70%" height="250"
+                                        <iframe width="100%" height="200"
                                             src="https://maps.google.com/maps?q={{ $empresa->latitud }},{{ $empresa->longitud }}&output=embed"
                                             class="rounded"></iframe>
                                     </div>

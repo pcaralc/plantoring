@@ -18,19 +18,31 @@
 
                             <x-input-add type='text' id="nombre" name='nombre' texto='Nombre: '
                                 value='{{ $planta->nombre }}' placeholder='{{ $planta->nombre }}' />
-                            <x-input-add type='text' id="descripcion" name='descripcion' texto='Descripción: '
-                                value='{{ $planta->descripcion }}' placeholder='{{ $planta->descripcion }}' />
-                            <x-input-add type='file' id="imagen" name='imagen' texto='Imagen del terreno: '
-                                value='{{ $planta->imagen }}' placeholder='{{ $planta->imagen }}' />
                             <div class='row'>
                                 <div class='col-3'>
                                     <div class="mb-3 p-2">
                                         <label for="descripcion" class="form-label">Descripción: </label>
-                                        <textarea id="descripcion" name="descripcion" class="pl-2 rounded text-gray-900 w-full" 
+                                        <textarea id="descripcion" name="descripcion" class="pl-2 rounded text-gray-900 w-full"
                                             placeholder="{{ $planta->descripcion }}">{{ $planta->descripcion }}</textarea>
                                     </div>
                                 </div>
                             </div>
+                            <x-input-add type='file' id="imagen" name='imagen' texto='Imagen del terreno: '
+                                value='{{ $planta->imagen }}' placeholder='{{ $planta->imagen }}' />
+
+                            <div class='row'>
+                                <div class='col-3'>
+                                    <div class="mb-3 p-2">
+                                        <label for="temporada" class="form-label">Temporada: </label>
+                                        <select name="temporada" id="temporada" class="rounded text-gray-900 w-full">
+                                            <option value="{{ $planta->temporada }}" selected></option>
+                                            <option value="springSummer" >Primavera-Verano</option>
+                                            <option value="autumnWinter">Otoño-Invierno</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
                             <x-input-add type='date' id="siembra" name='siembra' texto='Fecha aprox. de siembra: '
                                 value='{{ $planta->siembra }}' placeholder='{{ $planta->siembra }}' />
                             <x-input-add type='date' id="cosecha" name='cosecha' texto='Fecha aprox. de cosecha: '

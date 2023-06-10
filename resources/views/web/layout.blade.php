@@ -40,6 +40,10 @@
             padding-left: 4%;
             padding-right: 5%;
         }
+
+        .google {
+            padding-top: 6px;
+        }
     </style>
 
 </head>
@@ -50,6 +54,23 @@
     <!--Header-->
     <div class="w-full m-0 p-0 bg-cover bg-bottom"
         style="background-image:url('https://cdn.pixabay.com/photo/2019/05/07/13/57/seedlings-4186033_1280.jpg'); height: 60vh; max-height:460px;">
+
+        <div id="google_translate_element" class="google flex justify-end mr-8"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'en,fr,it,pt,de',
+                    layout: google.translate.TranslateElement.InlineLayout.MODEL,
+                    gaTrack: true
+                }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+
         <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
             <!--Title-->
             <p class="text-white font-extrabold text-3xl md:text-5xl">
@@ -61,7 +82,6 @@
 
     <!--Container-->
     <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
-
         <div class="mx-0 sm:mx-6">
 
             <div class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
@@ -232,6 +252,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>

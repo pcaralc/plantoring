@@ -37,6 +37,8 @@
                 </div>
             </div>
 
+
+
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
@@ -55,6 +57,7 @@
                             </div>
                         </button>
                     </x-slot>
+
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
@@ -133,3 +136,4 @@
         </div>
     </div>
 </nav>
+

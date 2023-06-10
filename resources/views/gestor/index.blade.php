@@ -9,6 +9,7 @@
 
     <!-- Tailwind -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/notyf@3.3.0/dist/notyf.min.css" rel="stylesheet">
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
@@ -115,7 +116,6 @@
 
                     <!-- Settings Dropdown -->
                     <div class="hidden sm:flex sm:items-center sm:ml-6">
-
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
@@ -127,7 +127,7 @@
                             <x-dropdown-link :href="route('logout')"
                                 onclick="event.preventDefault();
                                                         this.closest('form').submit();">
-                                {{ __('LogOut') }}
+                                {{ __('Logout') }}
                             </x-dropdown-link>
                         </form>
 
@@ -282,6 +282,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>

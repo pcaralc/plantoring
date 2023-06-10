@@ -39,7 +39,7 @@
         .boton-alerta {
             position: fixed;
             top: 80px;
-            right: 40px;
+            right: 50px;
             width: 40px;
             height: 40px;
             background-color: rgb(224, 138, 10);
@@ -58,6 +58,20 @@
             display: none;
             align-items: center;
             justify-content: center;
+        }
+
+        .notification {
+            display: none;
+            position: fixed;
+            top: 80px;
+            right: 95px;
+            background-color:chocolate;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            font-weight: bold;
         }
     </style>
 
@@ -121,7 +135,9 @@
                     @endforeach
 
                     @if (!empty($plantaciones))
-                        <div class="boton-alerta" id="mi-alerta">
+
+                        <div class="boton-alerta " id="mi-alerta">
+                            <div id="notification" class="notification"></div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                                 class="mt-0.5 ml-1 bi bi-exclamation-triangle" viewBox="0 0 16 16">
                                 <path
@@ -133,7 +149,8 @@
 
                         <div class="alerta border border-green-600 rounded" id="mi-plantaciones">
 
-                            <p class="font-bold ml-3 mt-3 italic">La temperatura actual ({{$terreno->temperatura}}&#8451) puede afectar las siguientes plantaciones:</p>
+                            <p class="font-bold ml-3 mt-3 italic">La temperatura actual ({{ $terreno->temperatura }}&#8451)
+                                puede afectar las siguientes plantaciones:</p>
                             @foreach ($plantaciones as $plantacion)
                                 <ul>
                                     <li class="ml-12 list-disc">{{ $plantacion }}</li>
@@ -143,7 +160,7 @@
                     @endif
 
                     {{-- FIN ALERTA TEMPERATURA --}}
-                    
+
                 </div>
 
                 <div class='col rounded mt-8 '>
@@ -201,6 +218,7 @@
         </div>
     </div>
 
+
     <script>
         const botonFlotante = document.getElementById('mi-alerta');
         const plantaciones = document.getElementById('mi-plantaciones');
@@ -211,6 +229,17 @@
             } else {
                 plantaciones.style.display = 'none';
             }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var notification = document.getElementById("notification");
+            notification.textContent = "¡La temperatura puede afectar!";
+            notification.style.display = "block";
+
+            setTimeout(function() {
+                notification.style.display = "none";
+            }, 3000); // Ocultar la notificación después de 2 segundos
         });
     </script>
 @endsection

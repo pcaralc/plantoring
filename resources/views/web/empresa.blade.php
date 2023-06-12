@@ -36,6 +36,21 @@
     <!--Header-->
     <div class="w-full m-0 p-0 bg-cover bg-bottom"
         style="background-image:url('{{ asset($empresa->imagen) }}'); height: 60vh; max-height:460px;">
+        <div id="google_translate_element" class="google flex justify-end mr-8"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'en,fr,it,pt,de',
+                    layout: google.translate.TranslateElement.InlineLayout.MODEL,
+                    gaTrack: true
+                }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
         <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
             <!--Title-->
             <p class="font-semibold text-gradient uppercase italic dark:text-green-500 text-6xl md:text-6xl">

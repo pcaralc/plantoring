@@ -86,12 +86,11 @@
         <div class="flex flex-wrap justify-between pt-8 -mx-6 rounded">
 
             @foreach ($plantas as $planta)
-                <li class="list-none border border-gray-300 rounded mb-2" onmouseover="aumentarTarjeta(this)"
-                onmouseout="restaurarTarjeta(this)">
+                <li class="list-none border border-gray-300 rounded mb-2 hover:shadow-2xl" >
                     <div class="flex  h-32 bg-white rounded overflow-hidden shadow-lg ">
                         <a href="/terreno/{{ $empresa->id }}/plantacion/{{ $planta->id }}"
                             class="flex flex-wrap no-underline hover:no-underline ">
-                            <div class="w-full md:w-1/5 rounded-t">
+                            <div class="md:w-1/5 rounded-t">
                                 <img src="{{ asset($planta->imagen) }}" class="h-full w-full shadow">
                             </div>
 

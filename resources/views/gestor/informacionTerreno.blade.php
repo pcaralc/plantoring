@@ -189,9 +189,9 @@
                 <li class="list-none border border-green-400 rounded mb-2">
                     <div class="flex  h-32 bg-white rounded overflow-hidden shadow-lg ">
                         <a href="/gestor/plantacion/{{ $planta->id }}"
-                            class="flex flex-wrap no-underline hover:no-underline ">
-                            <div class="w-full md:w-1/5 rounded-t">
-                                <img src="{{ asset($planta->imagen) }}" class="h-full w-full shadow">
+                            class="flex flex-wrap no-underline hover:no-underline hover:shadow-2xl">
+                            <div class="md:w-1/5 rounded-t">
+                                <img width="800px" src="{{ asset($planta->imagen) }}" alt="{{$planta->nombre}}" class="h-full shadow">
                             </div>
 
                             <div class="w-full md:w-1/3 pl-4 flexflex-col flex-grow flex-shrink">

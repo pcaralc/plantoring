@@ -23,7 +23,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <x-input-add type='file' id="imagen" name='imagen' texto='Imagen del terreno: '
+                            <x-input-add type='file' id="imagen" name='imagen' texto='Imagen de la plantación: '
                                 value='' required />
                             <x-input-add type='text' id="latitud" name='latitud' texto='Latitud: ' value=''
                                 required />

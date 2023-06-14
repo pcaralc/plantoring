@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-                <x-input-add-gestor type='file' id="imagen" name='imagen' texto='Imagen del terreno: '
+                <x-input-add-gestor type='file' id="imagen" name='imagen' texto='Imagen de la plantación: '
                     value='{{ $planta->imagen }}' placeholder='{{ $planta->imagen }}' />
                 <div class='row'>
                     <div class='col-3'>

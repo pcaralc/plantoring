@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <x-input-add type='file' id="imagen" name='imagen' texto='Imagen del terreno: '
+                            <x-input-add type='file' id="imagen" name='imagen' texto='Imagen de la plantación: '
                                 value='{{ $planta->imagen }}' placeholder='{{ $planta->imagen }}' />
 
                             <div class='row'>

@@ -97,24 +97,9 @@ class TerrenoController extends Controller
 
     public function showGestor(Terreno $terreno)
     {
-        // Api del tiempo, sacar la temperatura del terreno
-        // echo "Current temperature in $location is {$api_result['current']['temperature']}℃", PHP_EOL;
-//af58fe6729db73cd0dd5ad05e3bf5dda
-        // $queryString = http_build_query([
-        //     'access_key' => 'af58fe6729db73cd0dd5ad05e3bf5dda',
-        //     'query' => $terreno->latitud,$terreno->longitud,
-        // ]);
+        //Vincular con api del tiempo
 
-        // $ch = curl_init(sprintf('%s?%s', 'https://api.weatherstack.com/current?access_key=af58fe6729db73cd0dd5ad05e3bf5dda&query=',$terreno->latitud,$terreno->longitud));
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        // $json = curl_exec($ch);
-        // curl_close($ch);
-
-        // $api_result = json_decode($json, true);
-        // $temperature = $api_result['current']['temperature'];
-
-        $uri = 'https://api.open-meteo.com/v1/forecast?latitude=37.409571&longitude=-1.864176&current_weather=true&hourly=temperature_2m';       
+        $uri = 'https://api.open-meteo.com/v1/forecast?latitude='.$terreno->latitud.'&longitude='.$terreno->longitud.'&current_weather=true&hourly=temperature_2m';       
 
         $resultado = file_get_contents($uri, false);
 

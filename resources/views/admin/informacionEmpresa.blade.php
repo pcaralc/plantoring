@@ -98,7 +98,7 @@
                                     </div>
 
                                     <div class="mt-4">
-                                        <iframe width="100%" height="200"
+                                        <iframe width="90%" height="150"
                                             src="https://maps.google.com/maps?q={{ $empresa->latitud }},{{ $empresa->longitud }}&output=embed"
                                             class="rounded"></iframe>
                                     </div>

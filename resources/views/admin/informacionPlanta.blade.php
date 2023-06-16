@@ -135,7 +135,7 @@
                                     </div>
 
                                     <div class='col rounded mt-3'>
-                                        <img class="rounded  " src="{{ asset($planta->imagen) }}" alt="" />
+                                        <img class="rounded  " src="{{ asset($planta->imagen) }}" style="height:350px;width: 400px;" alt="" />
                                     </div>
 
                                 </div>

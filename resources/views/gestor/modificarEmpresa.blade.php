@@ -17,7 +17,7 @@
                         <div class="mb-3 p-2">
                             <label for="descripcion" class="form-label">Descripción: </label>
                             <textarea id="descripcion" name="descripcion" class="pl-2 text-gray-900 rounded border border-gray-500 w-full"
-                                >{{ $planta->descripcion }}</textarea>
+                                >{{ $empresa->descripcion }}</textarea>
                         </div>
                     </div>
                 </div>
